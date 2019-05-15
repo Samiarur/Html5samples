@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>
+Html5
+</title>
+</head>
+
+<script>   
+    var vedioPlay=function(){
+        var videoRef=document.getElementById("myvideo")
+console.log();
+videoRef.play()
+           }
+
+           var vedioPause=function(){
+        var videoRef=document.getElementById("myvideo")
+console.log();
+videoRef.pause();
+           }   
+           var initializeValues=function(){
+               if(localStorage){
+                   if(localStorage.counter==null){
+                    localStorage.setItem(counter,20)
+                   }
+               }
+           }     
+           var currentCounter=0
+           var increamentCounter=function(){
+            currentCounter++
+            localStorage.setItem("Counter",currentCounter)
+           }
+           
+</script>
+
+<body onload=initializeValues()>
+<h1>Hello1003</h1>
+<video id="myvideo" width='500' controls loop muted>
+    <source src="SampleVideo_1280x720_1mb.mp4">
+</video>
+<h2>
+    
+</h2>
+<button id="vedioPlay" onclick="vedioPlay()">Play</button>
+<button id="vedioPause" onclick="vedioPause()">Play</button>
+<button onclick="increamentCounter()"> increase</button>
+</body>
+</html>

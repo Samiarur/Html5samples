@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>form</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>   
+            <div>
+                <label>Name</label>
+                <input type="text" autofocus required pattern="[A-Za-z]{0,10}"></input>
+            </div>         
+        </fieldset>
+        <fieldset>                
+                <legend>Professional Details</legend>
+
+            </fieldset>
+            <fieldset>
+                <div>
+                    <Label>DOB</Label>
+                    <input id="date" type="date" min="2019-05-06" step="2">
+                </div>
+            </fieldset>
+            <fieldset>
+                    <label>Age</label>
+                    <input type="number" min="10" max="100" step="10">
+            </fieldset>
+            <fieldset>
+                    <label>Email</label>
+                    <input type="email">
+                    <input type="url">
+                    <input type="range">
+                    <input type="color">
+            </fieldset>
+            <fieldset>
+                    <label>Progress</label>
+                   <progress min=0 max=100 value=5></progress>          
+            </fieldset>
+            <fieldset>
+                    <input type="text" list="citynames">     
+                    <datalist id="citynames">
+                        <option value="Chennai1">Chennai</option>
+                        <option value="Bangalore1">Bangalore</option>
+                    </datalist>          
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+    </form>
+    <script>
+        var setDefaultvalues = function(){
+            var date= new Date().tostring()
+            console.log(date)
+            var todayValue=date.split("T")[0]
+            document.getElementById("date").max=todayValue+1
+            
+        }
+    </script>
+</body>
+</html>
